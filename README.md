@@ -21,3 +21,6 @@ IMC = peso / (altura²)
 - 30 - 34,9: Obesidade  grau I
 - 35 - 39,9: Obesidade grau II
 - Acima de 40: Obesidade grave
+
+## GitHub Pages
+Link para o GitHub Pages: https://danniloraphael.github.io/calculadora-de-imc/
