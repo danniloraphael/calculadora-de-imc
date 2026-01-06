@@ -1,11 +1,28 @@
+// trata a entrada do usuário, substituindo vírgulas por pontos e validando o formato numérico
+function sanitizeNumberInput(value) {
+    const s = String(value).trim().replace(',', '.');
+    if (!/^\d+(\.\d+)?$/.test(s)) return NaN; 
+    return parseFloat(s);
+}
+
+// interpreta a altura, convertendo centímetros para metros se necessário
+function parseHeight(value) {
+    const n = sanitizeNumberInput(value);
+    if (Number.isNaN(n)) return NaN;
+    // heurística: se o valor for maior que 3, provavelmente está em centímetros
+    if (n > 3) return n / 100;
+    return n;
+}
+
+// calcula o IMC e atualiza a interface com a classificação correspondente
 function calcularIMC() {
     const pesoInput = document.querySelector('input[placeholder="Digite o peso (ex: 70,5)"]').value;
     const alturaInput = document.querySelector('input[placeholder="Digite a altura (ex: 1,75)"]').value;
 
-    const peso = parseFloat(pesoInput.trim().replace(',', '.'));
-    const altura = parseFloat(alturaInput.trim().replace(',', '.'));
+    const peso = sanitizeNumberInput(pesoInput);
+    const altura = parseHeight(alturaInput);
 
-    if (isNaN(peso) || isNaN(altura) || altura === 0) {
+    if (Number.isNaN(peso) || Number.isNaN(altura) || altura === 0) {
         alert('Por favor, insira valores válidos para peso e altura.');
         return;
     }
