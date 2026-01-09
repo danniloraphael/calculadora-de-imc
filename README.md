@@ -15,12 +15,14 @@ IMC = peso / (altura²)
 ```
 
 ## Classificação
-- Abaixo de 18,5: Abaixo do peso
+- Abaixo de 16,0: Magreza grave
+- 16,0 a 16,9: Magreza moderada
+- 17,0 a 18,5: Abaixo do peso
 - 18,5 - 24,9: Peso normal
 - 25 - 29,9: Sobrepeso
-- 30 - 34,9: Obesidade  grau I
-- 35 - 39,9: Obesidade grau II
-- Acima de 40: Obesidade grave
+- 30 - 34,9: Obesidade moderada
+- 35 - 39,9: Obesidade severa
+- Acima de 40: Obesidade mórbida
 
 ## GitHub Pages
 Link para o GitHub Pages: https://danniloraphael.github.io/calculadora-de-imc/
