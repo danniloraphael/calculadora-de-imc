@@ -35,7 +35,7 @@ function calcularIMC() {
     } else if (imc >= 16 && imc < 16.9) {
         document.querySelector('.alert').className = 'alert alert-warning';
         document.querySelector('.alert').textContent = `Seu IMC é: ${imc.toFixed(2)} → Magreza moderada.`;
-    } else if (imc >= 17 && imc < 18.5) {
+    } else if (imc >= 17 && imc < 18.4) {
         document.querySelector('.alert').className = 'alert alert-info';
         document.querySelector('.alert').textContent = `Seu IMC é: ${imc.toFixed(2)} → Abaixo do peso.`;
     } else if (imc >= 18.5 && imc < 24.9) {
